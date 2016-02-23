@@ -6,12 +6,16 @@ class MainAction extends Action
 {
 	public function mobile()
 	{
+		$this->assign("id",$_GET["id"]);
 		$this->display('mobile');
 	}
 
 	public function load()
 	{
-		$rows = simplexml_load_file('./Public/chairxml/Pages.xml');  //载入xml文件 $lists和xml文件的根节点是一样的
+		$info = A("Bar","Service")->getBarDetatils(array("id"=>$_GET["id"]));
+
+
+		$rows = simplexml_load_file($info['chair_xml']);  //./Public/chairxml/Pages.xml
 		 // $col = $bar->col;
 		// $row = $bar->row;
 		$data= array();
@@ -159,10 +163,9 @@ class MainAction extends Action
 		 $count=$_POST["count"];
 		 $selectedseat=$_POST["selectedseat"];
 
-		//  $count = 1;
-		//  $selectedseat=array('0'=>'1_1');
+		 $info = A("Bar","Service")->getBarDetatils(array("id"=>$_GET["id"]));
 
-		 $origin = simplexml_load_file('./Public/chairxml/Pages.xml');  //载入xml文件 $lists和xml文件的根节点是一样的
+		 $origin = simplexml_load_file($info['chair_xml']);  //载入xml文件 $lists和xml文件的根节点是一样的
 		 $dom = new DOMDocument('1.0','utf-8'); //创建XML对象
 		 $new = $dom->createElement('rows');
 		 $new->setAttribute('row_count',$origin['row_count']); //配置属性
@@ -198,7 +201,7 @@ class MainAction extends Action
 			 $cols = "";
 		 }
 		 //
-		 $dom->save("./Public/chairxml/Pages.xml");
+		 $dom->save($info['chair_xml']);
 		  $this->ajaxReturn(array(), "预定成功！", 1);
 	}
 

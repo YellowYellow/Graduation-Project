@@ -69,6 +69,9 @@ span.seatCharts-legendDescription {margin-left: 5px;line-height: 30px;}
 		<script type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/jquery.seat-charts.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/bootstrap3/js/bootstrap.min.js"></script>
+		<script>
+			var barid = "{$id}";
+		</script>
 		<script type="text/javascript">
 $(document).ready(function() {
 		var $cart = $('#selected-seats');
@@ -122,11 +125,11 @@ var seletedfinish = function(){
 		if(confirm(selected))
 		{
 			$.ajax({
-	           	url: "http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/selectfinish",
+	           	url: "http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/selectfinish?id="+barid,
 						  dataType: "json",
 	            method: "POST",
 							data: selectedItems,
-	            success: function(data) { 
+	            success: function(data) {
 	            }
 	        });
 		}
@@ -134,7 +137,7 @@ var seletedfinish = function(){
 
 var init = function(){
 	  $.ajax({
-            url: "http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/load",
+            url: "http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/load?id="+barid,
             dataType: "json",
             method: "POST",
             success: function(data) {
