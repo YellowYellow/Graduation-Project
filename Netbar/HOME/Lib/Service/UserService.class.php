@@ -1,6 +1,6 @@
-<?php 
+<?php
 /**
-* 
+*
 */
 import('@.Service.BaseService');
 class UserService extends BaseService
@@ -10,17 +10,17 @@ class UserService extends BaseService
 		// 空表
 		$this->dao = M();
 
-		$this->UserDao = M('user'); 
- 		
-	} 
+		$this->UserDao = M('user');
 
-	function checkUserPassword($condition)
-	{  
+	}
+
+	function getUserInfo($condition)
+	{
 		return $this->getInfo('UserDao',$condition);;
 	}
 
 	function registerUser($data)
-	{ 
+	{
 		return $this->saveInfo('UserDao',$data);
 	}
 }

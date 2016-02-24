@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
 * 主界面Action
 */
@@ -11,7 +11,7 @@ class UserAction extends Action
 	}
 
 	public function register()
-	{ 
+	{
 		$this->display('register');
 	}
 
@@ -23,16 +23,16 @@ class UserAction extends Action
 							'question'=>$_GET["question"],
 							'answer'  =>$_GET["answer"]);
 		A('User','Service')->registerUser($data);
-		$this->redirect("/User/index",Array(),0,""); 
+		$this->redirect("/User/index",Array(),0,"");
 	}
-	
+
 	public function login()
-	{ 
+	{
 		$condition = array('user_id'=>$_GET["user_id"],'passwd'=>$_GET["password"]);
-		 if(A('User','Service')->checkUserPassword($condition))
+		 if(A('User','Service')->getUserInfo($condition))
 		{
 			$this->redirect("/Main/index",Array(),0,"");
-		} 
+		}
 	}
 	// // 获取游戏的版本号
 	// public function getVersionsByProject()
@@ -51,7 +51,7 @@ class UserAction extends Action
 	// 			$data[$key] = $value;
 	// 		}
 	// 	}
- 
+
 	// 	$pageCount = ceil(A('Check', 'Service')->getBugItemsCount($data)/$_POST['pageSize']);
 	// 	$currentPage = ($_POST['currentPage']>$pageCount)?$pageCount:$_POST['currentPage'];
 
@@ -75,13 +75,13 @@ class UserAction extends Action
 	// 	$result = A('Check', 'Service')->removeItemById($_GET['id']);
 	// 	echo "删除成功".$result;
 	// }
- 
+
  // 	public function submitItem()
  // 	{
  // 	 	$sub = A('Check', 'Service')->subItemById($_GET['id']);
 	// 	echo "修改成功";
  // 	}
 
- 	
+
 }
  ?>
