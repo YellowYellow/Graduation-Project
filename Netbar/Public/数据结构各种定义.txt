@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bar>
+<col>5</col>  		列数	
+<row>5</row>		行数	
+ <rows>			具体某一行
+ <user>			具体某一个座位
+   <name>1_1</name>	座位的行数列数
+   <id>1</id> 		座位号
+   <flag>a</flag>	座位状态
+ </user> 
+</rows>
+</bar>
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Check Action</title>
+		<!-- CSS File -->
+		<link rel="stylesheet" href="__PUBLIC__/bootstrap3/css/bootstrap.min.css"> 
+	</head>
+	<body>
+		<!-- 这个是Check Action
+		<a href="__URL__/bbb">调到同一级bbb</a>
+		<a href="__APP__/Test/bbb">调到上一级bbb</a> -->
+		<div class="container-fluid">  
+		<div class="row" style="height:100px"> 
+		</div>
+			<div class="row"> 
+			<div class="col-xs-8 col-xs-offset-2">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">新网吧入驻</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form" action="__URL__/registerfinish">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">用户名：</label>
+								<div class="col-sm-9"> 
+									<input type="text" class="form-control" name="user_id" placeholder="中英文，长度在5-13"> 
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">密码：</label>
+								<div class="col-sm-9"> 
+									<input type="password" class="form-control" name="passwd" placeholder="密码"> 
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">重复密码：</label>
+								<div class="col-sm-9"> 
+									<input type="password" class="form-control" id="inputPassword3" placeholder="重复密码"> 
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">密码提示问题：</label>
+								<div class="col-sm-4">
+									<select name="question" class="form-control">
+										<option value="你的初恋叫什么名字">你的初恋叫什么名字</option>
+										<option value="你的初恋叫什么名字">你的初恋叫什么名字</option>
+										<option value="你的初恋叫什么名字">你的初恋叫什么名字</option>
+									</select>
+								</div>
+								</div>
+								<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">密码提示问题答案</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="answer" placeholder="密码提示问题答案">
+								</div>
+							</div>
+							 <div class="modal-footer">
+						<button class="btn btn-primary"  type="submit" data-dismiss="modal">注册</button>
+						<button type="button" class="btn btn-default">重置</button>
+					</div>
+						</form>
+					</div>
+					</div>
+					</div>
+					</div>
+				</div>
+		<!-- JS File -->
+		<script src="__PUBLIC__/jquery-1.8.3.min.js"></script>
+		<script src="__PUBLIC__/bootstrap3/js/bootstrap.min.js"></script>
+		<script src="__PUBLIC__/js/register.js"></script>  
+	</body>
+</html>
