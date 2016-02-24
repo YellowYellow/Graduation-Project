@@ -4,6 +4,14 @@
 */
 class MainAction extends Action
 {
+	public function replying()
+	{
+		$arr = array('bar_id'=>$_GET['bar_id'],'comment_id'=>$_GET['comment_id'],'comment'=>$_POST['comment'],'time'=>date('Y-m-d H:i:s'));
+ 
+	 	A('Main','Service')->insertReply($arr);
+		$this->ajaxReturn(array(),"",0);
+	}
+
 	public function mobile()
 	{
 		$this->assign("id",$_GET["id"]);

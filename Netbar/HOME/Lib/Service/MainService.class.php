@@ -29,5 +29,10 @@ class MainService extends BaseService
 		return $this->getCount('CommentDao',$condition);
 	}
 
+	function insertReply($info)
+	{
+		return $this->saveInfo('ReplyDao',$info);
+	}
+
 }
  ?>

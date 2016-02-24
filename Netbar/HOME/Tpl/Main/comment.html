@@ -94,6 +94,31 @@
                  </div>
 		</div>
 	</div>
+
+	<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			 <div class="modal-dialog">
+				 <div class="modal-content">
+					 <div class="modal-header">
+						 <h4 class="modal-title" id="myModalLabel">回复</h4>
+					 </div>
+					 <div class="modal-body">
+						 <form class="form-horizontal" id="reply_content" role="form">
+							 <div class="form-group">
+								 <label for="inputEmail3" class="col-sm-2 control-label">回复内容：</label>
+								 <div class="col-sm-8">
+									 <textarea class="form-control" name="comment"  style="height:200px;width:400px;"></textarea>
+								 </div>
+							 </div>
+							 <div class="modal-footer">
+						<button id="ok" class="btn btn-primary" type="submit" data-dismiss="modal">回复</button>
+						<button type="button" class="btn btn-default">重置</button>
+					</div>
+						 </form>
+					 </div>
+					 </div>
+			 </div>
+			 </div>
+
 	</body>
 		<script type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/jquery.seat-charts.min.js"></script>
@@ -104,6 +129,7 @@
 		var appPath = "__APP__";
 		var urlPath = "__URL__";
 		var barid = "{$id}";
+		var comment_id;
 		var GLOBAL = {pagination: {pageSize: 6, page: 1, pageCount: 10, currentPage: 1}};
 		</script>
 
@@ -115,6 +141,8 @@
 				<div class="comment_content_con">
 					<p class="comment_content">{{comment}}</p>
 					<p class="comment_date">{{time}}</p>
+					<button id="replying{{id}}" style="float:right;" class="btn-primary">回复</button>
+					<div class="row" style="height:20px;"></div>
 				</div>
 			</div>
 		</script>

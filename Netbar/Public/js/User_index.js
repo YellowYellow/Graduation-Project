@@ -107,6 +107,14 @@ var generateTableInfo = function(data,data2) {
        }
 
 
+      $(":button[id^='replying']").each(function(){
+         $(this).click(function(){
+           var id = $(this).attr('id');
+
+          comment_id = id.substring(8);
+           $("#Modal").modal();
+         });
+      });
        // $(this).parent().children('.code-ho').show();
    }
 
@@ -127,6 +135,21 @@ var generateTableInfo = function(data,data2) {
        });
    }
 
+   var insertReply = function () {
+
+     var reply_content= $("#reply_content").serialize();
+
+      $.ajax({
+          data: reply_content,
+          url: urlPath + "/replying?bar_id="+barid+"&comment_id="+comment_id,
+          dataType: "json",
+          method: "POST",
+          success: function(data) {
+              window.location.reload();
+          }
+      });
+   }
+
 $(document).ready(function() {
 
    var _init = function() {
@@ -134,6 +157,10 @@ $(document).ready(function() {
        GLOBAL.pagination.currentPage = 1;
        doSearch();
    }
+
+   $("#ok").click(function(){
+     insertReply();
+   });
 
    _init();
 });
