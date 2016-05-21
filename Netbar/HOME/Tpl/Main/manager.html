@@ -68,10 +68,10 @@ span.seatCharts-legendDescription {margin-left: 5px;line-height: 30px;}
 		<div class="row">
 		 	<div class="col-xs-2 col-xs-offset-1" id="myScrollspy">
           	<ul class="nav nav-tabs nav-stacked" id="myNav">
-						<li class="active"><a href="http://http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main">主页</a></li>
-						<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/manager">座位管理</a></li>
-						<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/shop">店铺管理</a></li>
-						<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/comment">网吧评论</a></li>
+              	<li class="active"><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main">主页</a></li>
+              	<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/manager">座位管理</a></li>
+              	<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/shop">店铺管理</a></li>
+              	<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/comment">网吧评论</a></li>
           	</ul>
     	</div>
     	<div class="col-xs-9">
@@ -91,7 +91,7 @@ span.seatCharts-legendDescription {margin-left: 5px;line-height: 30px;}
 							 <input id="cols" type="text" placeholder="座位总列数">
 					</div>
 					<div class="col-xs-3">
-						<button class="btn btn-primar" id="createxml"> 创建 </button>
+						<button class="btn btn-primary" id="createxml"> 创建 </button>
 						<button id="ok" class="checkout-button btn btn-primary"> 完成 </button>
 					</div>
 			</div>
@@ -151,7 +151,7 @@ $(document).ready(function() {
 
  		$.ajax({
             data: createResult,
-            url: "http://localhost/Netbar/index.php/Main/createxml",
+            url: "http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/createxml",
             dataType: "json",
             method: "POST",
             success: function(data) {

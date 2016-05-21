@@ -14,7 +14,7 @@
 @media screen and (max-width: 360px) {.demo {width:340px}}
 
 .front{width: 300px;margin: 5px 32px 45px 32px;background-color: #f0f0f0;	color: #666;text-align: center;padding: 3px;border-radius: 5px;}
-.booking-details {float: right;position: relative;width:200px;height: 450px; }
+.booking-details {float: left;position: relative;width:200px; }
 .booking-details h3 {margin: 5px 5px 0 0;font-size: 16px;}
 .booking-details p{line-height:26px; font-size:16px; color:#999}
 .booking-details p span{color:#666}
@@ -53,10 +53,20 @@ span.seatCharts-legendDescription {margin-left: 5px;line-height: 30px;}
 					</div>
 				</div>
 				<div class="row">
-						<div id="seat-map" class="col-xs-8"> </div>
-						<div class="booking-details col-xs-4">
+						<div id="seat-map"> </div>
+						<div class="booking-details">
 							<ul id="selected-seats"></ul>
 						</div>
+				</div>
+				<div class="row">
+					<button class="btn btn-success" style="margin-left: 20px;">两连坐  </button>
+					<button class="btn btn-info" style="margin-left: 20px;">三连坐  </button>
+					<button class="btn btn-primary" style="margin-left: 20px;">四连坐  </button>
+					<button class="btn btn-danger" style="margin-left: 20px;">五连坐</button>
+				</div>
+					<div class="row" style="height:30px;"></div>
+				<div class="row">
+					<button class="btn btn-danger" style="float: right; margin:40px auto 0 auto;; width:100px;">确认  </button>
 				</div>
 			</div>
 		</div>
@@ -67,6 +77,9 @@ span.seatCharts-legendDescription {margin-left: 5px;line-height: 30px;}
 		<script type="text/javascript" src="__PUBLIC__/bootstrap3/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 $(document).ready(function() {
+		var $cart = $('#selected-seats');
+		$counter = $('#counter'), //票数
+		$total = $('#total'); //总计金额
   	 init();
 });
 
@@ -104,7 +117,33 @@ var loadseat = function(data){
 				[ 'b', 'unavailable', '已售出']
 			]
 		},
+		click: function () { //点击事件
+			if (this.status() == 'available') { //可选座
+				$('<li>'+(this.settings.row+1)+'排'+this.settings.label+'座</li>')
+					.attr('id', 'cart-item-'+this.settings.id)
+					.data('seatId', this.settings.id)
+					.appendTo($('#selected-seats'));
 
+				/*$counter.text(sc.find('selected').length+1);
+				$total.text(recalculateTotal(sc)+price);*/
+
+				return 'selected';
+			} else if (this.status() == 'selected') { //已选中
+					/*//更新数量
+					$counter.text(sc.find('selected').length-1);
+					//更新总计
+					$total.text(recalculateTotal(sc)-price);*/
+
+					//删除已预订座位
+					$('#cart-item-'+this.settings.id).remove();
+					//可选座
+					return 'available';
+			} else if (this.status() == 'unavailable') { //已售出
+				return 'unavailable';
+			} else {
+				return this.style();
+			}
+		}
 	});
 	 sc.get(data['sale']).status('unavailable');
 }
