@@ -50,6 +50,7 @@
                     <li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/manager">座位管理</a></li>
                     <li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/shop">店铺管理</a></li>
                     <li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/comment">网吧评论</a></li>
+
                 </ul>
             </div>
             <div class="col-xs-9">
@@ -74,14 +75,13 @@
                         </dd>
                         <dd class="job_bt">
                             <h3 class="description">配置描述</h3>
-                                <p>显卡 :  {$bar.GPU}</p>
-                                <p>CPU： {$bar.CPU}</p>
-                                <p>Memory： {$bar.Memory}</p>
-                                <p>HardDisk： {$bar.Harddisk}</p>
-                                <p>Display： {$bar.Display}</p>
-                                <p>KeyBoard： {$bar.Keyboard}</p>
-                                <p>Mouse： {$bar.Mouse}</p>
-                                <p>SSD： {$bar.SSD}</p>
+														<p>CPU： {$bar.CPU}</p>
+														 <p>Memory： {$bar.Memory}</p>
+														 <p>HardDisk： {$bar.Harddisk}</p>
+														 <p>Display： {$bar.Display}</p>
+														 <p>KeyBoard： {$bar.Keyboard}</p>
+														 <p>Mouse： {$bar.Mouse}</p>
+														 <p>SSD： {$bar.SSD}</p>
                                 <p><br/></p>
                         </dd>
                         </dl>
@@ -101,7 +101,7 @@
                     <dd>
                         <ul class="c_feature">
                              <li>
-                                 <span>规模</span> 60座
+                                  <span>规模</span> 60座
                              </li>
                         </ul>
                          <ul class="c_feature">
@@ -124,17 +124,9 @@
 				 <div class="modal-dialog">
 					 <div class="modal-content">
 						 <div class="modal-header">
-							 <h4 class="modal-title" id="myModalLabel">新网吧入驻</h4>
+							  <h4 class="modal-title" id="myModalLabel">新网吧入驻</h4>
 						 </div>
-						 <div class="modal-body">
-							 <!-- <p>显卡 :  {$bar.GPU}</p>
-							 <p>CPU： {$bar.CPU}</p>
-							 <p>Memory： {$bar.Memory}</p>
-							 <p>HardDisk： {$bar.Harddisk}</p>
-							 <p>Display： {$bar.Display}</p>
-							 <p>KeyBoard： {$bar.Keyboard}</p>
-							 <p>Mouse： {$bar.Mouse}</p>
-							 <p>SSD： {$bar.SSD}</p> -->
+						 <div class="modal-body"> 
 							 <form class="form-horizontal" role="form" action="__URL__/adjust_info">
 								 <div class="form-group">
 									 <label for="inputEmail3" class="col-sm-2 control-label">显卡：</label>
@@ -184,16 +176,6 @@
 										<input type="text" class="form-control" name="SSD" placeholder="{$bar.SSD}">
 									</div>
 								</div>
-								 <!-- <div class="form-group">
-									 <label for="inputPassword3" class="col-sm-2 control-label">密码提示问题：</label>
-									 <div class="col-sm-4">
-										 <select name="question" class="form-control">
-											 <option value="你的初恋叫什么名字">你的初恋叫什么名字</option>
-											 <option value="你的初恋叫什么名字">你的初恋叫什么名字</option>
-											 <option value="你的初恋叫什么名字">你的初恋叫什么名字</option>
-										 </select>
-									 </div>
-									 </div>  -->
 								 </div>
 									<div class="modal-footer">
 							 <button class="btn btn-primary"  type="submit" data-dismiss="modal">修改</button>
