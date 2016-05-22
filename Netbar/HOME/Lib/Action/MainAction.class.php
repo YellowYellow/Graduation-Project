@@ -153,5 +153,54 @@ class MainAction extends Action
 		$arr = A('Main','Service')->getCommentList(array('bar_id'=>'1'), $currentPage, $_POST['pageSize']);
 		$this->ajaxReturn(array('data'=>$arr,'pageCount'=>$pageCount), "数据获取成功！", 1);
  	}
+
+	public function selectfinish()
+	{
+		 $count=$_POST["count"];
+		 $selectedseat=$_POST["selectedseat"];
+
+		//  $count = 1;
+		//  $selectedseat=array('0'=>'1_1');
+
+		 $origin = simplexml_load_file('./Public/chairxml/Pages.xml');  //载入xml文件 $lists和xml文件的根节点是一样的
+		 $dom = new DOMDocument('1.0','utf-8'); //创建XML对象
+		 $new = $dom->createElement('rows');
+		 $new->setAttribute('row_count',$origin['row_count']); //配置属性
+		 $new->setAttribute('col_count',$origin['col_count']); //配置属性
+		 $dom->appendChild($new);
+
+		 for($i=0;$i<$origin['row_count'];$i++)
+		 {
+				 for($j=0;$j<$count;$j++)
+				{
+					$temparr = explode('_',$selectedseat[$j]);
+					if($temparr[0]-1 == $i)
+					{
+							if($j == 0)
+							{
+								$col = $origin->row[$temparr[0]-1];
+								$cols = (array)$col[cols];
+							}
+							$cols[0][$temparr[1]-1] = "b";
+					}
+				}
+			 $data = $dom->createElement('row');
+			 if($cols != null)
+			 {
+				 $data->setAttribute('cols',$cols[0]);
+			 }
+			 else{
+				  $col = $origin->row[$i];
+			 		$cols = (array)$col[cols];
+			    $data->setAttribute('cols',$cols[0]);
+		   }
+			 $new->appendChild($data); //对象中插入根节点
+			 $cols = "";
+		 }
+		 //
+		 $dom->save("./Public/chairxml/Pages.xml");
+		  $this->ajaxReturn(array(), "预定成功！", 1);
+	}
+
 }
  ?>

@@ -60,7 +60,7 @@ span.seatCharts-legendDescription {margin-left: 5px;line-height: 30px;}
 				</div>
 					<div class="row" style="height:30px;"></div>
 				<div class="row">
-					<button class="btn btn-danger" style="float: right; margin:40px auto 0 auto;; width:100px;">确认  </button>
+					<button id="ok" class="btn btn-danger" style="float: right; margin:40px auto 0 auto;; width:100px;">确认  </button>
 				</div>
 			</div>
 		</div>
@@ -89,9 +89,49 @@ $(document).ready(function() {
 		$("#five").click(function(){
 				cleverseleted(5);
 		});
+		$("#ok").click(function(){
+				seletedfinish();
+		});
 
-  	 init();
+  	init();
 });
+
+var seletedfinish = function(){
+
+		var selected = "您选择的是：";
+		var count =0;
+		var selectedseat = new Array();
+
+		$(".seatCharts-seat.seatCharts-cell.selected").each(function()
+		{
+			 selected = selected + "第" + $(this).text() + "号座  ";
+		});
+
+
+		$(".seatCharts-seat.seatCharts-cell.selected").each(function()
+		{
+			 selectedseat.push($(this).attr("id"));
+			 count = count + 1;
+		});
+
+		var selectedItems =  {
+    "count": count,
+    "selectedseat": selectedseat
+    }
+
+		if(confirm(selected))
+		{
+			$.ajax({
+	           	url: "http://localhost/Graduation-Project/Netbar/index.php/Main/selectfinish",
+						  dataType: "json",
+	            method: "POST",
+							data: selectedItems,
+	            success: function(data) {
+								 window.location.reload();
+	            }
+	        });
+		}
+}
 
 var init = function(){
 	  $.ajax({
