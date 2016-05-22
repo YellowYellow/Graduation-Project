@@ -108,10 +108,11 @@ var init = function(){
 
 var cleverseleted = function(data){
 
+		clearseatstate();
+
 		var count = 0;
 		var flag = 0;
 
-			alert(data);
 		for(var i=0;i<tabledata.data.data['row'][0];i++)
 		{
 			for(var j=0;j<tabledata.data.data['col'][0];j++)
@@ -125,17 +126,43 @@ var cleverseleted = function(data){
 				 }
 				 if(count == data)
 				 {
-					 alert(i);
-					 
+					 /*alert(i);
 					 alert(j);
-						flag = 1;
-						break;
+					 alert(count);*/
+					 changeseatstate(i,j,count);
+					 flag = 1;
+					 break;
 			 	 }
 			}
 			if(flag == 1)
 			{
 				break;
 			}
+		}
+}
+
+var clearseatstate = function(){
+		$(".seatCharts-seat.seatCharts-cell.selected").attr("class","seatCharts-seat seatCharts-cell available")
+}
+
+var changeseatstate = function(i,j,count){
+
+		var temp;
+		var tempi;
+		var tempj;
+
+		for(var m=0;m<count;m++)
+		{
+			tempi = i+1;
+			tempj = j+1;
+			temp = tempi+"_"+tempj;
+
+			if(	$("#"+temp).hasClass("seatCharts-seat seatCharts-cell available"))
+			{
+				$("#"+temp).attr("class","seatCharts-seat seatCharts-cell selected");
+			}
+
+			j--;
 		}
 }
 
