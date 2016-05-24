@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost_3306
-Source Server Version : 50617
+Source Server Version : 50710
 Source Host           : localhost:3306
 Source Database       : graduate_project
 
 Target Server Type    : MYSQL
-Target Server Version : 50617
+Target Server Version : 50710
 File Encoding         : 65001
 
-Date: 2016-02-23 14:14:38
+Date: 2016-05-24 10:28:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -44,16 +44,16 @@ CREATE TABLE `bar` (
 -- ----------------------------
 -- Records of bar
 -- ----------------------------
-INSERT INTO `bar` VALUES ('1', '满天星网吧', '1', '1', './Public/chairxml/Pages1.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
-INSERT INTO `bar` VALUES ('2', '星辰网吧', '2', '2', './Public/chairxml/Pages2.xml', '14', '1', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
-INSERT INTO `bar` VALUES ('3', '满天星网吧', '3', '3', './Public/chairxml/Pages3.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
-INSERT INTO `bar` VALUES ('4', '满天星网吧', '4', '4', './Public/chairxml/Pages4.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
-INSERT INTO `bar` VALUES ('5', '满天星网吧', '5', '5', './Public/chairxml/Pages5.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
-INSERT INTO `bar` VALUES ('6', '满天星网吧', '6', '6', './Public/chairxml/Pages6.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
-INSERT INTO `bar` VALUES ('7', '满天星网吧', '7', '7', './Public/chairxml/Pages7.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
-INSERT INTO `bar` VALUES ('8', '满天星网吧', '8', '8', './Public/chairxml/Pages8.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
-INSERT INTO `bar` VALUES ('9', '满天星网吧', '9', '9', './Public/chairxml/Pages9.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
-INSERT INTO `bar` VALUES ('10', '满天星网吧', '10', '20', './Public/chairxml/Pages10.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://172.17.108.1/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
+INSERT INTO `bar` VALUES ('1', '满天星网吧', '1', '1', './Public/chairxml/Pages1.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
+INSERT INTO `bar` VALUES ('2', '星辰网吧', '2', '2', './Public/chairxml/Pages2.xml', '14', '1', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
+INSERT INTO `bar` VALUES ('3', '满天星网吧', '3', '3', './Public/chairxml/Pages3.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
+INSERT INTO `bar` VALUES ('4', '满天星网吧', '4', '4', './Public/chairxml/Pages4.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
+INSERT INTO `bar` VALUES ('5', '满天星网吧', '5', '5', './Public/chairxml/Pages5.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '2-3');
+INSERT INTO `bar` VALUES ('6', '满天星网吧', '6', '6', './Public/chairxml/Pages6.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
+INSERT INTO `bar` VALUES ('7', '满天星网吧', '7', '7', './Public/chairxml/Pages7.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
+INSERT INTO `bar` VALUES ('8', '满天星网吧', '8', '8', './Public/chairxml/Pages8.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
+INSERT INTO `bar` VALUES ('9', '满天星网吧', '9', '9', './Public/chairxml/Pages9.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
+INSERT INTO `bar` VALUES ('10', '满天星网吧', '10', '20', './Public/chairxml/Pages10.xml', '3', '4', ' 影驰GTX 750Ti 骁将', 'Intel 酷睿i5 4590', '芝奇8G', '1T', '金泰克S310系列（128GB）', '雷柏V56', 'G60 牧马人游戏鼠标', 'http://121.42.191.9:8088/Graduation-Project/Netbar/Public/image/bar1.png', '戴尔（DELL）UltraSharp U2515H 25英寸2K宽屏LED背光IPS液晶显示器', 'cos装前台  英雄联盟超神送饮料送网费', '4-5');
 
 -- ----------------------------
 -- Table structure for comment
@@ -132,14 +132,16 @@ DROP TABLE IF EXISTS `reply`;
 CREATE TABLE `reply` (
   `reply_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `comment_id` int(11) NOT NULL,
+  `bar_id` int(11) NOT NULL,
   `comment` text NOT NULL,
   `time` text NOT NULL,
   PRIMARY KEY (`reply_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of reply
 -- ----------------------------
+INSERT INTO `reply` VALUES ('1', '1', '1', 'addad', '2015-12-20 10:25:56');
 
 -- ----------------------------
 -- Table structure for user
@@ -161,36 +163,9 @@ CREATE TABLE `user` (
 -- ----------------------------
 INSERT INTO `user` VALUES ('0000000001', '1', 'hzw', 'hzw', '你的父亲是谁？', '黄志文', null);
 INSERT INTO `user` VALUES ('0000000002', '2', 'as', 'as', '你的父亲是谁？', '黄志文', '');
-INSERT INTO `user` VALUES ('0000000003', '0', '', '', '你的初恋叫什么名字', '', null);
-INSERT INTO `user` VALUES ('0000000004', '0', '', '', '你的初恋叫什么名字', '', null);
 
 -- ----------------------------
 -- View structure for bar_detail
 -- ----------------------------
 DROP VIEW IF EXISTS `bar_detail`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER  VIEW `bar_detail` AS SELECT
-bar.bar_name,
-location_detail.location_detail,
-location.location_name,
-bar.good,
-bar.bad,
-bar.GPU,
-bar.CPU,
-bar.Memory,
-bar.Harddisk,
-bar.SSD,
-bar.Keyboard,
-bar.Mouse,
-bar.Sofa,
-bar.Display,
-bar.self_comment,
-bar.chair_xml,
-bar.id,
-bar.price
-FROM
-bar ,
-location_detail ,
-location
-WHERE
-bar.location_detail_id = location_detail.id AND
-location_detail.location_id = location.location_id ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bar_detail` AS select `bar`.`bar_name` AS `bar_name`,`location_detail`.`location_detail` AS `location_detail`,`location`.`location_name` AS `location_name`,`bar`.`good` AS `good`,`bar`.`bad` AS `bad`,`bar`.`GPU` AS `GPU`,`bar`.`CPU` AS `CPU`,`bar`.`Memory` AS `Memory`,`bar`.`Harddisk` AS `Harddisk`,`bar`.`SSD` AS `SSD`,`bar`.`Keyboard` AS `Keyboard`,`bar`.`Mouse` AS `Mouse`,`bar`.`Sofa` AS `Sofa`,`bar`.`Display` AS `Display`,`bar`.`self_comment` AS `self_comment`,`bar`.`chair_xml` AS `chair_xml`,`bar`.`id` AS `id`,`bar`.`price` AS `price` from ((`bar` join `location_detail`) join `location`) where ((`bar`.`location_detail_id` = `location_detail`.`id`) and (`location_detail`.`location_id` = `location`.`location_id`)) ;
