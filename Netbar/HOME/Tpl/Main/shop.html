@@ -46,11 +46,11 @@
         <div class="row">
             <div class="col-xs-2 col-xs-offset-1" id="myScrollspy">
                 <ul class="nav nav-tabs nav-stacked" id="myNav">
-                    <li class="active"><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main">主页</a></li>
-                    <li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/manager">座位管理</a></li>
-                    <li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/shop">店铺管理</a></li>
-                    <li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/comment">网吧评论</a></li>
-
+											<li class="active"><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/index?id={$id}">主页</a></li>
+											<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/manager?id={$id}">座位管理</a></li>
+												<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/shop?id={$id}">店铺管理</a></li>
+											<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/comment?id={$id}">网吧评论</a></li>
+									</ul>
                 </ul>
             </div>
             <div class="col-xs-9">
@@ -127,7 +127,7 @@
 						 <div class="modal-header">
 							 <h4 class="modal-title" id="myModalLabel">新网吧入驻</h4>
 						 </div>
-						 <div class="modal-body"> 
+						 <div class="modal-body">
 							 <form class="form-horizontal" role="form" action="__URL__/adjust_info">
 								 <div class="form-group">
 									 <label for="inputEmail3" class="col-sm-2 control-label">显卡：</label>
@@ -176,7 +176,7 @@
 									<div class="col-sm-9">
 										<input type="text" class="form-control" name="SSD" placeholder="{$bar.SSD}">
 									</div>
-								</div> 
+								</div>
 								 </div>
 									<div class="modal-footer">
 							 <button class="btn btn-primary"  type="submit" data-dismiss="modal">修改</button>
@@ -193,6 +193,7 @@
         <script type="text/javascript" src="__PUBLIC__/bootstrap3/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="__PUBLIC__/js/User_index.js"></script>
         <script>
+					var barid = "{$id}"; 
         var appPath = "__APP__";
         var urlPath = "__URL__";
         var GLOBAL = {pagination: {pageSize: 8, page: 1, pageCount: 10, currentPage: 1}};

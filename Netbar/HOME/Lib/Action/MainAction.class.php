@@ -95,23 +95,26 @@ class MainAction extends Action
 	// 首页
 	public function index()
 	{
-		$this->assign('barid',$_GET['bar_id']);
+		$this->assign('id',$_GET['id']);
 		$this->display('index');
 	}
 
 	public function manager()
 	{
+		$this->assign("id",$_GET["id"]);
 		$this->display('manager');
 	}
 
 	public function comment()
 	{
+		$this->assign("id",$_GET["id"]);
 		$this->display('comment');
 	}
 
 	public function shop()
 	{
-		$bar = A('Bar','Service')->getBarDetatils(array('id'=>'1'));
+	  $this->assign("id",$_GET["id"]);
+		$bar = A('Bar','Service')->getBarDetatils(array('id'=>$_GET["id"]));
 
 		$this->assign('bar',$bar);
 

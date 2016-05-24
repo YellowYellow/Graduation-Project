@@ -31,7 +31,9 @@ class UserAction extends Action
 		$condition = array('user_id'=>$_GET["user_id"],'passwd'=>$_GET["password"]);
 		 if(A('User','Service')->getUserInfo($condition))
 		{
-			$this->redirect("/Main/index",Array(),0,"");
+			$userinfo = A('User','Service')->getUserInfo($condition);
+			$id = A('Bar','Service')->getBarIdByManagerId(array("manager_id"=>$userinfo['id']));
+			$this->redirect("/Main/index",array('id'=>$id),0,"");
 		}
 	}
 	// // 获取游戏的版本号

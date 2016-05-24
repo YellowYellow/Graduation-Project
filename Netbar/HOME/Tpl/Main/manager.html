@@ -67,12 +67,13 @@ span.seatCharts-legendDescription {margin-left: 5px;line-height: 30px;}
 	<div class="container-fluid">
 		<div class="row">
 		 	<div class="col-xs-2 col-xs-offset-1" id="myScrollspy">
-          	<ul class="nav nav-tabs nav-stacked" id="myNav">
-						<li class="active"><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main">主页</a></li>
-						<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/manager">座位管理</a></li>
-						<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/shop">店铺管理</a></li>
-						<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/comment">网吧评论</a></li>
-          	</ul>
+						<ul class="nav nav-tabs nav-stacked" id="myNav">
+								<li class="active"><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/index?id={$id}">主页</a></li>
+								<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/manager?id={$id}">座位管理</a></li>
+									<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/shop?id={$id}">店铺管理</a></li>
+								<li><a href="http://121.42.191.9:8088/Graduation-Project/Netbar/index.php/Main/comment?id={$id}">网吧评论</a></li>
+						</ul>
+      	</ul>
     	</div>
     	<div class="col-xs-9">
     		<div class="row" style="background-color: #dedef8;">
@@ -106,26 +107,37 @@ span.seatCharts-legendDescription {margin-left: 5px;line-height: 30px;}
 		<script type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/jquery.seat-charts.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/bootstrap3/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/template.js"></script>
+
+		<script id="rowbutton" type="text/html">
+				<button id="{{row}}" class="btn-primary rowbutton">这行有座</button>
+		</script>
+
+		<script>
+			var barid = "{$id}";
+		</script>
+
 		<script type="text/javascript">
 var price = 80; //票价
-$(document).ready(function() {
 
+var rowbutton = function(para){
+	for(var i=0;i<=$("#cols").val();i++)
+	{
+		if($("#"+para+"_"+i).attr("class")=="seatCharts-seat seatCharts-cell selected")
+		{
+		 	 $("#"+para+"_"+i).attr("class","seatCharts-seat seatCharts-cell available");
+		}
+		else{
+			 $("#"+para+"_"+i).attr("class","seatCharts-seat seatCharts-cell selected");
+		}
+	}
+}
+
+$(document).ready(function() {
 
 	var $cart = $('#selected-seats'), //座位区
 	$counter = $('#counter'), //票数
 	$total = $('#total'); //总计金额
-
-	// var ids = new Array({$row});
-
-	//  for(i=0;i<ids.length;i++)
-	//  {
-	// 	var temp = new Array({$col});
-	// 	for(j=0;j<temp.length;j++)
-	// 	{
-	// 		temp[j] = '0';
-	// 	}
-	// 	ids[i] = temp;
-	//  }
 
 	$("#ok").click(function(){
 
@@ -163,6 +175,7 @@ $(document).ready(function() {
  	$("#createxml").click(function(){
 
  	var fina = new Array();
+
  	for(var i=0;i<$("#rows").val();i++)
  	{
  		var one_row = "";
@@ -195,14 +208,12 @@ $(document).ready(function() {
 					.appendTo($cart);
 
 				$counter.text(sc.find('selected').length+1);
-				$total.text(recalculateTotal(sc)+price);
 
 				return 'selected';
 			} else if (this.status() == 'selected') { //已选中
 					//更新数量
 					$counter.text(sc.find('selected').length-1);
 					//更新总计
-					$total.text(recalculateTotal(sc)-price);
 
 					//删除已预订座位
 					$('#cart-item-'+this.settings.id).remove();
@@ -214,20 +225,22 @@ $(document).ready(function() {
 				return this.style();
 			}
 		}
-	});
- 	});
-	// sc.get(['1_2', '4_4','4_5','6_6','6_7','8_5','8_6','8_7','8_8', '10_1', '10_2']).status('unavailable');
 
+		});
+		var i=1;
+		$(".seatCharts-row").each(function()
+		{
+				var rowbutton = template('rowbutton',{
+						row:i,
+				});
+				$(rowbutton).appendTo($(this));
+				i++;
+		});
+		$(".rowbutton").click(function(){
+				rowbutton($(this).attr("id"));
+		});
+	});
 });
-//计算总金额
-function recalculateTotal(sc) {
-	var total = 0;
-	sc.find('selected').each(function () {
-		total += price;
-	});
-
-	return total;
-}
 </script>
 	</body>
 </html>
