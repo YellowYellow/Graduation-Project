@@ -152,15 +152,17 @@ var generateTableInfo = function(data,data2) {
 
    var add_comment = function(){
 
-      $.ajax({
-          url: urlPath + "/commenting?user_id=1&bar_id="+ barid +"&comment="+$("#comment_ipt").val(),
-          dataType: "json",
-          method: "POST",
-          success: function(data) {
-              window.location.reload();
-          }
-      });
+      if(confirm("你的回复内容："+$("#comment_ipt").val()+"  确认提交？"))
+      {
+        $.ajax({
+            url: urlPath + "/commenting?user_id=1&bar_id="+ barid +"&comment="+$("#comment_ipt").val(),
+            dataType: "json",
+            method: "POST",
+            success: function(data) {
 
+            }
+        });
+      } 
     }
 
 $(document).ready(function() {
