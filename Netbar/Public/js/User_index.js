@@ -150,6 +150,19 @@ var generateTableInfo = function(data,data2) {
       });
    }
 
+   var add_comment = function(){
+
+      $.ajax({
+          url: urlPath + "/commenting?user_id=1&bar_id="+ barid +"&comment="+$("#comment_ipt").val(),
+          dataType: "json",
+          method: "POST",
+          success: function(data) {
+              window.location.reload();
+          }
+      });
+
+    }
+
 $(document).ready(function() {
 
    var _init = function() {
@@ -161,6 +174,10 @@ $(document).ready(function() {
    $("#ok").click(function(){
      insertReply();
    });
+
+   $("#addcomment").click(function(){
+       add_comment();
+    });
 
    _init();
 });

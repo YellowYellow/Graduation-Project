@@ -11,6 +11,7 @@
 
 	</head>
 	<body>
+		<div class="row">
         		 	<div class="web_part" style="height:492px">
             			<div class="comment_list">
             			   <!--  <div class="comment">
@@ -24,15 +25,22 @@
             			    </div> -->
             			</div>
 								</div>
-					<div class="row" style="height:80px;">
-					</div>
-				<div class="row">
-				    <div class="col-xs-10 col-xs-offset-1">
-					   <nav>
-						  <ul class="pagination" id="pagination">
-						  </ul>
-					   </nav>
-				    </div>
+							</div>
+							<div style="height:60px;" class="row">
+							</div>
+							<div style="height:60px;" class="row">
+								   <div class="comment_con">
+													 <input type="text" class="comment_txt" id="comment_ipt"></input>
+													 <button style="float:right;" class="btn btn-primary" id="addcomment">发表评论</button>
+									 </div>
+							</div>
+						<div class="row">
+						    <div class="col-xs-10 col-xs-offset-1">
+							   <nav>
+								  <ul class="pagination" id="pagination">
+								  </ul>
+							   </nav>
+						    </div>
                  <!--    <div class="comment_con">
                             <textarea class="comment_txt" id="comment_ipt"></textarea>
                             <a href="javascript:;" class="add_btn" id="add_comment">发表评论</a>
@@ -44,13 +52,14 @@
 		<script type="text/javascript" src="__PUBLIC__/jquery.seat-charts.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/bootstrap3/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/User_index.js"></script>
-			<script type="text/javascript" src="__PUBLIC__/js/template.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/template.js"></script>
 		<script>
 		var appPath = "__APP__";
 		var urlPath = "__URL__";
 		var barid = "{$id}";
 		var GLOBAL = {pagination: {pageSize: 6, page: 1, pageCount: 10, currentPage: 1}};
 		</script>
+
 
 		<script id="list" type="text/html">
 			<div class="comment" id="{{id}}">
