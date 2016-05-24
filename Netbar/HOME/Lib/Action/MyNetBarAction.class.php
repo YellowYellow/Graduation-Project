@@ -36,6 +36,8 @@ class MyNetBarAction extends Action {
     	//dump($_GET['id']);
     	$bar_detail = A('Bar','Service')->getBarDetatils(array('id'=>$_GET['id']));
 
+      //$bar_detail = A('Bar','Service')->getBarDetatils(array('id'=>$_GET['id']));
+
       $rows = simplexml_load_file($bar_detail['chair_xml']);  //./Public/chairxml/Pages.xml
        // $col = $bar->col;
       // $row = $bar->row;

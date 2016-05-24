@@ -1,4 +1,4 @@
- 
+
 
 .web_part{padding:10px;padding-bottom:0;}
 
@@ -61,6 +61,17 @@
 
 .comment .comment_content_con .comment_content{line-height:20px;word-break:break-all;}
 .comment .comment_content_con .comment_date{text-align:right;padding-right:10px; color:#acacac;}
+
+.comment .reply{margin-left:300px;}
+.comment .avatar2{float:left;}
+.comment .avatar2 img{height:30px;width:30px;}
+.comment .comment_content_con2{position:relative;padding:5px;margin-left:55px;border:1px solid #e3e3e3;background:#feffef;border-radius:2px;}
+.comment .comment_content_con2 .tran{position:absolute;left: -21px;}
+.comment .comment_content_con2 .tran .front{left: 0;width:0;height:0;position:absolute;border-width:10px;border-style:solid;border-color:transparent #e3e3e3 transparent  transparent;}
+.comment .comment_content_con2 .tran .back{left: 1px;width:0;height:0;position:absolute;border-width:10px;border-style:solid;border-color:transparent  #feffef transparent  transparent ;}
+
+.comment .comment_content_con2 .comment_content{line-height:20px;word-break:break-all;}
+.comment .comment_content_con2 .comment_date{text-align:right;padding-right:10px; color:#acacac;}
 
 .comment_con{margin-top:10px;}
 .comment_con .comment_txt{height:100px;width:100%;}

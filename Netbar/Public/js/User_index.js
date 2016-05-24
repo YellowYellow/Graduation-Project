@@ -76,7 +76,7 @@ var initPagination = function() {
        });
 }
 
-var generateTableInfo = function(data) {
+var generateTableInfo = function(data,data2) {
 
        $(".comment_list").empty();
        if(data!=null)
@@ -84,10 +84,25 @@ var generateTableInfo = function(data) {
            for (var i = 0; i < data.length; i++) {
 
                var list = template('list',{
+                   id:  data[i]['comment_id'],
                    comment:data[i]['comment'],
                    time:data[i]['time']
                });
                $(list).appendTo($(".comment_list"));
+
+              for(var j=0;j<data2.length;j++)
+              {
+                if(data[i]['comment_id'] == data2[j]['comment_id'])
+                {
+                  var reply = template('reply',{
+                        id:  data2[j]['reply_id'],
+                        comment:data2[j]['comment'],
+                        time:data2[j]['time']
+                    });
+                  $(reply).appendTo($("#"+data[i]['comment_id']));
+                }
+              }
+
            };
        }
 
@@ -97,7 +112,7 @@ var generateTableInfo = function(data) {
 
    var doSearch = function () {
 
-       var searchKey = "&pageSize=" + GLOBAL.pagination.pageSize + "&currentPage=" + GLOBAL.pagination.currentPage;
+       var searchKey =  "&id=" + barid +"&pageSize=" + GLOBAL.pagination.pageSize + "&currentPage=" + GLOBAL.pagination.currentPage;
 
        $.ajax({
            data: searchKey,
@@ -107,7 +122,7 @@ var generateTableInfo = function(data) {
            success: function(data) {
                GLOBAL.pagination.pageCount = data.data.pageCount;
                initPagination();
-               generateTableInfo(data.data.data);
+               generateTableInfo(data.data.data,data.data.data2);
            }
        });
    }

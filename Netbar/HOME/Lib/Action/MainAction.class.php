@@ -10,6 +10,12 @@ class MainAction extends Action
 		$this->display('mobile');
 	}
 
+	public function commentmobile()
+	{
+		$this->assign("id",$_GET["id"]);
+		$this->display('mobilecomment');
+	}
+
 	public function load()
 	{
 		$info = A("Bar","Service")->getBarDetatils(array("id"=>$_GET["id"]));
@@ -157,8 +163,9 @@ class MainAction extends Action
 		$pageCount = ceil(A('Main', 'Service')->getCommentCount()/$_POST['pageSize']);
 		$currentPage = ($_POST['currentPage']>$pageCount)?$pageCount:$_POST['currentPage'];
 
-		$arr = A('Main','Service')->getCommentList(array('bar_id'=>'1'), $currentPage, $_POST['pageSize']);
-		$this->ajaxReturn(array('data'=>$arr,'pageCount'=>$pageCount), "数据获取成功！", 1);
+		$arr = A('Main','Service')->getCommentList(array('bar_id'=>$_POST['id']), $currentPage, $_POST['pageSize']);
+		$arr2 = A('Main','Service')->getReplyList(array('bar_id'=>$_POST['id']), $currentPage, $_POST['pageSize']);
+		$this->ajaxReturn(array('data'=>$arr,'data2'=>$arr2,'pageCount'=>$pageCount), "数据获取成功！", 1);
  	}
 
 	public function selectfinish()
