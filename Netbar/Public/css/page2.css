@@ -1,0 +1,103 @@
+
+
+.web_part{padding:10px;padding-bottom:0;}
+
+/* .ordered{display:none;} */
+.no_list,.no_menu{text-align:center;padding:10px;}
+.red{color:#ff0000;}
+.bold{font-weight:bold;}
+.ordered h1{padding-bottom:10px;background:url(../images/icon_order.png) no-repeat;padding-left: 30px;padding-top: 4px;}
+.ordered .total{float:right;font-weight: normal;}
+.ordered_list .ordered_info{background:#f7ead7;display:none;position:relative;border:1px solid #fff;border-radius:2px;margin-bottom:6px;padding:8px 0;}
+.ordered_list .ordered_info span{margin-left:10px;}
+.ordered_list .ordered_info .price{color:#ff0000;font-weight:bold;}
+.ordered_list .ordered_info .delete_this{position:absolute;width:18px;height:18px;background:url(../images/dc_bg_icons.png) no-repeat;top:7px;right:10px;}
+.ordered .total{text-align:right;}
+
+
+.menu h1{padding-bottom:5px;border-bottom:1px solid #c7c7c7;}
+
+.dish_con{padding:5px 0;border-top:1px solid #d8d8d8;position:relative;display:none;margin-top: -1px;}
+.dish_con .dish_img{height:45px;width:57px;float:left;margin-right:10px;}
+.dish_con .name_price{float:left;width:200px;zoom:1;}
+.dish_con .name_price .name{zoom:1;height: 20px;overflow: hidden;padding: 3px 0;text-overflow: ellipsis;white-space: nowrap;}
+.dish_con .hot{position:absolute;top:8px;width:49px;height:41px;background:url(../images/dc_bg_icons.png) no-repeat -66px -29px;right:120px;}
+.dish_con .no_stock{position:absolute;top:8px;width:49px;height:41px;background:url(../images/dc_bg_icons.png) no-repeat -6px -30px;right:120px;}
+.dish_con .order_this{background: none repeat scroll 0 0 #f5f5f5;position:absolute;border: 1px solid #cecece;right:10px;top:13px;color: #000000;padding: 5px 10px;text-decoration:none;}
+
+.cus_checkbox .content{padding-left:4px;display:inline-block;*display:inline;zoom:1;margin-top:2px;vertical-align:middle;}
+
+.order_div{background:#fffcec;border-bottom:1px solid #d8d8d8;padding:10px;border-top:1px solid #d8d8d8;}
+.order_div .select_type,.order_div .select_date{padding:5px 0;}
+.order_div .select_date{white-space:nowrap;}
+.order_div .select_type .type_radio{float:left;margin-top:4px;margin-right:10px;margin-top:0px\9;}
+.order_div .count_con{margin-left:10px;position:relative;float:left;width:66px;height:24px;background:url(../images/dc_bg_icons.png) no-repeat -99px -90px;}
+.order_div .count_con .count_ipt{line-height:24px;height: 24px;border:none;width:44px;background:none;padding:0;padding-left:4px;}
+.order_div .count_con .control{position:absolute;right:1px;width:17px;height:12px;}
+.order_div .count_con .add{top:0;}
+.order_div .count_con .reduce{top:12px;}
+
+.order_div .order_btn{ border:1px solid #d56f0b; background:#ff9c00; line-height:24px;color:#fff; font-size:12px; padding:0 10px; border-radius:4px; float:right;text-decoration:none;}
+.order_btn:hover{ background:#008aff; border:1px solid #0b60d5; }
+
+.cus_checkbox{margin-right:9px;}
+.cus_checkbox input{width:16px;height:16px;top:0\9;*top:6px;}
+
+.type_radio input{border:none;}
+
+
+.arrear_info{word-break:break-all;position:relative;border:1px solid #e3e3e3;border-radius:2px;margin-bottom:6px;padding:5px;}
+.arrear_info .info{padding:0;}
+.arrear_info span{margin-left:5px;}
+.ordered .total{text-align:right;}
+
+.comment{margin-bottom:10px;position:relative;}
+.comment .avatar{float:left;}
+.comment .avatar img{height:40p;width:40px;}
+.comment .comment_content_con{position:relative;padding:5px;margin-left:55px;border:1px solid #e3e3e3;background:#feffef;border-radius:2px;}
+.comment .comment_content_con .tran{position:absolute;left: -21px;}
+.comment .comment_content_con .tran .front{left: 0;width:0;height:0;position:absolute;border-width:10px;border-style:solid;border-color:transparent #e3e3e3 transparent  transparent;}
+.comment .comment_content_con .tran .back{left: 1px;width:0;height:0;position:absolute;border-width:10px;border-style:solid;border-color:transparent  #feffef transparent  transparent ;}
+
+.comment .comment_content_con .comment_content{line-height:20px;word-break:break-all;}
+.comment .comment_content_con .comment_date{text-align:right;padding-right:10px; color:#acacac;}
+
+.comment .reply{margin-left:100px;}
+.comment .avatar2{float:left;}
+.comment .avatar2 img{height:30px;width:30px;}
+.comment .comment_content_con2{position:relative;padding:5px;margin-left:55px;border:1px solid #e3e3e3;background:#feffef;border-radius:2px;}
+.comment .comment_content_con2 .tran{position:absolute;left: -21px;}
+.comment .comment_content_con2 .tran .front{left: 0;width:0;height:0;position:absolute;border-width:10px;border-style:solid;border-color:transparent #e3e3e3 transparent  transparent;}
+.comment .comment_content_con2 .tran .back{left: 1px;width:0;height:0;position:absolute;border-width:10px;border-style:solid;border-color:transparent  #feffef transparent  transparent ;}
+
+.comment .comment_content_con2 .comment_content{line-height:20px;word-break:break-all;}
+.comment .comment_content_con2 .comment_date{text-align:right;padding-right:10px; color:#acacac;}
+
+.comment_con{margin-top:10px;}
+.comment_con .comment_txt{height:100px;width:100%;}
+.comment_con .add_btn{float:right;text-decoration:none;border:1px solid #cccccc;background:#f9f9f9;padding:5px 15px;margin-top:10px;}
+
+.more{display:block;text-align:center;margin:10px 0;text-decoration:none;}
+
+.comment1{border-bottom:1px dashed #ccc;padding: 15px 0;}
+.comment1 .avatar{float:left;}
+.comment1 .avatar img{height:40p;width:40px;}
+.comment1 .comment_content_con{position:relative;padding:0 5px 5px;margin-left:55px;border-radius:2px;}
+
+.comment1 .comment_content_con .comment_content{line-height:20px;word-break:break-all;}
+.comment1 .comment_content_con .comment_content .emp_name{color:#ff9c00}
+.comment1 .comment_content_con .comment_date{margin-top:5px;text-align:left;color:#acacac;}
+
+.close_order{width:247px;height:72px;margin:10px auto;background:url(../images/close_order.png) no-repeat ;}
+
+.meal_type_label{margin-left:10px;display:none;}
+.meal_type_label .meal_type{margin-left:5px;font-weight:normal;}
+.meal_type_label .meal_type_radio{border:0;}
+
+.more_ord{padding-top:5px;text-align:right;display:none;}
+.more_ord .more_ordered{text-decoration:none;color: #0360af;}
+.more_ord .more_ordered:hover{text-decoration:underline;color: #ff9c00;}
+
+.delete_comment1{float:right;color: #0360af;text-decoration: none;}
+.delete_comment1:hover{color:#ff9c00;text-decoration:underline;}
+.delete_comment{z-index:1;position:absolute;background:url(../images/delete_comment.png) no-repeat ;width:16px;height:16px;right:-5px;top:-5px;}
