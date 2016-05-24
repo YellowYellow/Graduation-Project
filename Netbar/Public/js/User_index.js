@@ -90,19 +90,21 @@ var generateTableInfo = function(data,data2) {
                });
                $(list).appendTo($(".comment_list"));
 
-              for(var j=0;j<data2.length;j++)
+              if(data2!=null)
               {
-                if(data[i]['comment_id'] == data2[j]['comment_id'])
+                for(var j=0;j<data2.length;j++)
                 {
-                  var reply = template('reply',{
-                        id:  data2[j]['reply_id'],
-                        comment:data2[j]['comment'],
-                        time:data2[j]['time']
-                    });
-                  $(reply).appendTo($("#"+data[i]['comment_id']));
+                  if(data[i]['comment_id'] == data2[j]['comment_id'])
+                  {
+                    var reply = template('reply',{
+                          id:  data2[j]['reply_id'],
+                          comment:data2[j]['comment'],
+                          time:data2[j]['time']
+                      });
+                    $(reply).appendTo($("#"+data[i]['comment_id']));
+                  }
                 }
-              }
-
+              } 
            };
        }
 
@@ -162,7 +164,7 @@ var generateTableInfo = function(data,data2) {
 
             }
         });
-      } 
+      }
     }
 
 $(document).ready(function() {
